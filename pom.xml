@@ -6,7 +6,12 @@
 
     <groupId>org.example</groupId>
     <artifactId>nacos-spring-test</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ServiceProducer</module>
+        <module>ServiceConsumer</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
