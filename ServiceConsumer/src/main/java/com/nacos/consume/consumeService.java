@@ -1,5 +1,6 @@
 package com.nacos.consume;
 
+import com.nacos.loadbalance.LoadBalancer;
 import com.sun.jndi.toolkit.url.Uri;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -18,10 +19,13 @@ public class consumeService {
     private DiscoveryClient discoveryClient;
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private LoadBalancer loadBalancer;
     @RequestMapping("/getService")
     public Object getService(){
         List<ServiceInstance> serviceInstanceList = discoveryClient.getInstances("ProduceService");
-        ServiceInstance serviceInstance = serviceInstanceList.get(0);
+//        ServiceInstance serviceInstance = serviceInstanceList.get(0);
+        ServiceInstance serviceInstance = loadBalancer.getSingleAddres(serviceInstanceList);
         URI url = serviceInstance.getUri();
         String result = restTemplate.getForObject(url+"/setService",String.class);
         return "调用生产者服务 - 返回值" + result;
