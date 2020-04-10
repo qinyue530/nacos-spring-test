@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: test  #Date Id
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        group: DEFAULT_GROUP
+        file-extension: yaml #nacos的配置列表 dataId 必须有后缀 且与配置格式相同
+        namespace: 16126105-d30f-487c-827d-423a11f68a39  #不配置默认为public空间

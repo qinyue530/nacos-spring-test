@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ServiceProducer" />
         <module name="ServiceConsumer" />
+        <module name="ConfigService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ConfigService" options="-parameters" />
       <module name="ServiceConsumer" options="-parameters" />
       <module name="ServiceProducer" options="-parameters" />
       <module name="nacos-spring-test" options="-parameters" />

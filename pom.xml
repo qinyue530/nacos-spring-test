@@ -11,6 +11,7 @@
     <modules>
         <module>ServiceProducer</module>
         <module>ServiceConsumer</module>
+        <module>ConfigService</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
