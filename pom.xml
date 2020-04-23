@@ -12,7 +12,7 @@
         <module>ServiceProducer</module>
         <module>ServiceConsumer</module>
         <module>ConfigService</module>
-        <module>DcitsTest</module>
+        <module>ServiceGateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

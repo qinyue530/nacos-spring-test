@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DcitsTest" />
+        <module name="ServiceGateway" />
         <module name="openfeign-service" />
         <module name="ServiceConsumer" />
         <module name="ServiceProducer" />
@@ -14,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DcitsTest" target="1.8" />
       <module name="HealthService" target="1.8" />
       <module name="nacos-spring-test" target="1.8" />
       <module name="openfeign-parent" target="1.8" />
@@ -25,6 +26,7 @@
       <module name="ConfigService" options="-parameters" />
       <module name="DcitsTest" options="-parameters" />
       <module name="ServiceConsumer" options="-parameters" />
+      <module name="ServiceGateway" options="-parameters" />
       <module name="ServiceProducer" options="-parameters" />
       <module name="nacos-spring-test" options="-parameters" />
       <module name="openfeign-parent" options="-parameters" />
