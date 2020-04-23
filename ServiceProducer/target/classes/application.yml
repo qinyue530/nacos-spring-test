@@ -1,9 +1,9 @@
 server:
-  port: 8090
+  port: 8085
 spring:
   application:
     name: ProduceService
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.137.1:8849
+        server-addr: 192.168.137.1:8848
