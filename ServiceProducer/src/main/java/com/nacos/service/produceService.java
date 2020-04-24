@@ -1,8 +1,11 @@
 package com.nacos.service;
 
+import com.nacos.openfeign.produceOpenfeign;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,4 +28,13 @@ public class produceService {
     private String nullService(){
         return "null  " + serverPort;
     }
+
+    @Autowired
+    private produceOpenfeign produceOpenfeign;
+    @RequestMapping("/doOpenfeign")
+    public String doOpenfeign(){
+        String result = produceOpenfeign.openfeigntest(1);
+        return "===========" + result ;
+    }
+
 }
