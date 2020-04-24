@@ -3,6 +3,7 @@ package com.nacos.consume;
 import com.nacos.loadbalance.LoadBalancer;
 import com.sun.jndi.toolkit.url.Uri;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -17,6 +18,8 @@ import java.util.List;
 
 @RestController
 public class consumeService {
+    @Value("${server.port}")
+    private String serverPort;
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired
@@ -50,7 +53,7 @@ public class consumeService {
     @RequestMapping("/Ribbon")
     public Object ribbonService(){
         String result= restTemplate.getForObject("http://ProduceService/setService" , String.class);
-        return "Ribbon 负载均衡 - 返回信息" + result ;
+        return "=======" +serverPort+"Ribbon 负载均衡 - 返回信息" + result ;
     }
 
     /**
