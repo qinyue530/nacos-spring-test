@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -15,13 +17,16 @@ import java.util.List;
 
 @RestController
 public class consumeService {
-
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
+    private RestTemplate restTemplateMy;
+    @Autowired
     private LoadBalancer loadBalancer;
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
 
     /**
      * 手写负载均衡器
@@ -33,7 +38,8 @@ public class consumeService {
 //        ServiceInstance serviceInstance = serviceInstanceList.get(0);
         ServiceInstance serviceInstance = loadBalancer.getSingleAddres(serviceInstanceList);
         URI url = serviceInstance.getUri();
-        String result = restTemplate.getForObject(url+"/setService",String.class);
+        String result = restTemplateMy.getForObject(url+"/setService",String.class);
+        System.out.println(result+ "===============================");
         return "调用生产者服务 - 返回值" + result;
     }
     /**
@@ -47,4 +53,13 @@ public class consumeService {
         return "Ribbon 负载均衡 - 返回信息" + result ;
     }
 
+    /**
+     * LoadBalancerClient 实现负载均衡
+     * @return
+     */
+    @RequestMapping("/loadBalance")
+    public Object loadBalanceService(){
+        ServiceInstance result = loadBalancerClient.choose("ProduceService");
+        return "loadBalance 负载均衡 - 返回信息" + result ;
+    }
 }

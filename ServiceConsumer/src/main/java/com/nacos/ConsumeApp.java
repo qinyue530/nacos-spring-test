@@ -19,4 +19,8 @@ public class ConsumeApp {
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
+    @Bean
+    public RestTemplate restTemplateMy(){
+        return new RestTemplate();
+    }
 }

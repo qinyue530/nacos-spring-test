@@ -12,6 +12,7 @@ public class produceService {
 
     @GetMapping("/setService")
     private String setService(){
+        System.out.println("============ " + serverPort);
         return "生产者 添加服务" + serverPort;
     }
 
