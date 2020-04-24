@@ -15,4 +15,13 @@ public class produceService {
         return "生产者 添加服务" + serverPort;
     }
 
+    @GetMapping("/setService/aaa")
+    private String getService(){
+        return "getService" + serverPort;
+    }
+
+    @GetMapping("/")
+    private String nullService(){
+        return "null  " + serverPort;
+    }
 }

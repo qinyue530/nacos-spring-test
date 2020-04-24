@@ -15,6 +15,7 @@ spring:
           uri: lb://ProduceService/
           #匹配规则
           predicates:
+            - Path=/**
             - Path=/setService/**
     nacos:
       discovery:
