@@ -37,6 +37,7 @@ public class consumeService {
         return "调用生产者服务 - 返回值" + result;
     }
     /**
+     * 注意 restTemplate要加上 @LoadBalanced注解， 看ConsumeApp代码
      * Ribbon 负载均衡
      */
 
