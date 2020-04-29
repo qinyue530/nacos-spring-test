@@ -1,5 +1,7 @@
 package com.nacos.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.nacos.openfeign.produceOpenfeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,6 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class produceService {
+    // 限流规则名称
+    private static final String GETORDER_KEY = "orderToMember";
+
     @Value("${server.port}")
     private String serverPort;
 
@@ -24,20 +29,32 @@ public class produceService {
 
     @GetMapping("/setService/aaa")
     private String getService(){
-        return "getService" + serverPort;
+        return "getService" ;
     }
-
+    @SentinelResource(value = GETORDER_KEY, blockHandler = "getOrderQpsException")
     @GetMapping("/")
-    private String nullService(){
+    public String nullService(){
         return "null  " + serverPort;
     }
-
     @Autowired
     private produceOpenfeign produceOpenfeign;
+
+    @SentinelResource(value = GETORDER_KEY, blockHandler = "getOrderQpsException")
     @RequestMapping("/doOpenfeign")
     public String doOpenfeign(){
         String result = produceOpenfeign.openfeigntest(1);
         return "===========" + result ;
+    }
+
+    @RequestMapping("/orderToMemberSentinelResource")
+    public String orderToMemberSentinelResource() {
+        return "orderToMemberSentinelResource";
+    }
+
+
+    public String getOrderQpsException(BlockException e) {
+        e.printStackTrace();
+        return "该接口已经被限流啦!";
     }
 
 }

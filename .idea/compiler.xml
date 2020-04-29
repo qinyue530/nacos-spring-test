@@ -20,6 +20,7 @@
       <module name="nacos-spring-test" target="1.8" />
       <module name="openfeign-parent" target="1.8" />
       <module name="openfeign-service" target="1.8" />
+      <module name="ServiceSentinel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -11,6 +11,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/DcitsTest/pom.xml" />
+        <option value="$PROJECT_DIR$/ServiceSentinel/pom.xml" />
         <option value="$PROJECT_DIR$/openfeign-parent/pom.xml" />
         <option value="$PROJECT_DIR$/openfeign-service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
