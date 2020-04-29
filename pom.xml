@@ -13,6 +13,7 @@
         <module>ServiceConsumer</module>
         <module>ConfigService</module>
         <module>ServiceGateway</module>
+        <module>ServiceSentinel</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
