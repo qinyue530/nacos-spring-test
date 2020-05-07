@@ -1,0 +1,16 @@
+server:
+  tomcat:
+    max-threads: 100
+spring:
+  application:
+    name: ProduceService
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 129.204.22.71:8848
+      config:
+        server-addr: 129.204.22.71:8848
+      #  sentinel:
+      #transport:
+      #dashboard: 127.0.0.1:8719
+    #eager: true

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ConsumeService
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 129.204.22.71:8848
+      config:
+        server-addr: 129.204.22.71:8848
