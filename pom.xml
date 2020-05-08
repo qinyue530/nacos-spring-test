@@ -11,9 +11,8 @@
     <modules>
         <module>ServiceProducer</module>
         <module>ServiceConsumer</module>
-        <module>ConfigService</module>
         <module>ServiceGateway</module>
-        <module>ServiceSentinel</module>
+        <module>ServiceConfig</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -51,6 +50,12 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+            <version>1.2.0</version>
         </dependency>
     </dependencies>
 

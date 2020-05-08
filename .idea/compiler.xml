@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ServiceConsumer" />
-        <module name="ServiceConfig" />
+        <module name="ConfigService" />
         <module name="openfeign-service" />
         <module name="ServiceSentinel" />
         <module name="ServiceGateway" />
@@ -20,11 +20,13 @@
       <module name="nacos-spring-test" target="1.8" />
       <module name="openfeign-parent" target="1.8" />
       <module name="openfeign-service" target="1.8" />
+      <module name="ServiceConfig" target="1.8" />
       <module name="ServiceSentinel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ConfigService" options="-parameters" />
       <module name="DcitsTest" options="-parameters" />
       <module name="ServiceConfig" options="-parameters" />
       <module name="ServiceConsumer" options="-parameters" />

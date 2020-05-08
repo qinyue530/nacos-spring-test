@@ -17,12 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 //-javaagent:D:\Apache\apache-skywalking-apm-bin\agent\skywalking-agent.jar -Dserver.port=7090
 public class ConfigController implements ApplicationContextAware {
     public static void main(String[] args) {
-
         SpringApplication.run(ConfigController.class);
-
     }
-
-
 
     @Value("${common.name}")
     private String name;
@@ -36,7 +32,6 @@ public class ConfigController implements ApplicationContextAware {
     public String getsssssss(){
         return String.valueOf(1/0);
     }
-
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
