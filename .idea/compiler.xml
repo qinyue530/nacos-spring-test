@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ServiceConsumer" />
+        <module name="ServiceConfig" />
         <module name="ConfigService" />
         <module name="openfeign-service" />
+        <module name="ServiceSkywalking" />
         <module name="ServiceSentinel" />
         <module name="ServiceGateway" />
         <module name="ServiceProducer" />
@@ -20,7 +22,6 @@
       <module name="nacos-spring-test" target="1.8" />
       <module name="openfeign-parent" target="1.8" />
       <module name="openfeign-service" target="1.8" />
-      <module name="ServiceConfig" target="1.8" />
       <module name="ServiceSentinel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -33,6 +34,7 @@
       <module name="ServiceGateway" options="-parameters" />
       <module name="ServiceProducer" options="-parameters" />
       <module name="ServiceSentinel" options="-parameters" />
+      <module name="ServiceSkywalking" options="-parameters" />
       <module name="nacos-spring-test" options="-parameters" />
       <module name="openfeign-parent" options="-parameters" />
       <module name="openfeign-service" options="-parameters" />
