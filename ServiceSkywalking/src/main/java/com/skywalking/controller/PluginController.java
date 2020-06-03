@@ -29,4 +29,14 @@ public class PluginController {
         return TraceContext.traceId();
 
     }
+    @GetMapping("/timeout")
+    public String timeout(){
+        try{
+            Thread.sleep(1500);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        return "timeout";
+    }
 }
