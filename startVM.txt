@@ -1,0 +1,5 @@
+sptringBoot整合skywalking启动参数
+本地的agent包                           -javaagent:/Users/qinyue/apache/apache-skywalking-apm-bin/agent/skywalking-agent.jar
+注册到skywalking上的服务显示的名称         -Dskywalking.agent.service_name=SkywalkingApplication
+指定skywalking服务地址                    -Dskywalking.collector.backend_service=127.0.0.1:11800
+本服务忽略的端口，即在skyawlking上不追踪:   -Dskywalking.trace.ignore_path=/getTrsceIdAAAAAA
