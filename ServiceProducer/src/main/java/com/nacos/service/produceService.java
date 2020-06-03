@@ -2,7 +2,10 @@ package com.nacos.service;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.nacos.ProduceApp;
 import com.nacos.openfeign.produceOpenfeign;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,34 +19,41 @@ import javax.servlet.http.HttpServletRequest;
 public class produceService {
     // 限流规则名称
     private static final String GETORDER_KEY = "orderToMember";
+    private static Logger log = LogManager.getLogger(produceService.class);
 
     @Value("${server.port}")
     private String serverPort;
 
     @GetMapping("/setService")
-    private String setService(HttpServletRequest request){
+    private String setService(HttpServletRequest request) {
+        log.info("info====");
+        log.debug("debug====");
+        log.error("error====");
+        log.fatal("fatal====");
         String gatewayPort = request.getHeader("serverPort");
-        System.out.println("网关端口号 " + gatewayPort +"============ " + serverPort);
-        return "网关端口号 " + gatewayPort +"生产者 添加服务" + serverPort;
+        System.out.println("网关端口号 " + gatewayPort + "============ " + serverPort);
+        return "网关端口号 " + gatewayPort + "生产者 添加服务" + serverPort;
     }
 
     @GetMapping("/setService/aaa")
-    private String getService(){
-        return "getService" ;
+    private String getService() {
+        return "getService";
     }
+
     @SentinelResource(value = GETORDER_KEY, blockHandler = "getOrderQpsException")
     @GetMapping("/")
-    public String nullService(){
+    public String nullService() {
         return "null  " + serverPort;
     }
+
     @Autowired
     private produceOpenfeign produceOpenfeign;
 
     @SentinelResource(value = GETORDER_KEY, blockHandler = "getOrderQpsException")
     @RequestMapping("/doOpenfeign")
-    public String doOpenfeign(){
+    public String doOpenfeign() {
         String result = produceOpenfeign.openfeigntest(1);
-        return "===========" + result ;
+        return "===========" + result;
     }
 
     @RequestMapping("/orderToMemberSentinelResource")

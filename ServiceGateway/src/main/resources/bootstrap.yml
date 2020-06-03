@@ -10,7 +10,7 @@ spring:
       routes:
         ###根据我们的服务名称查找地址实现调用
         - id: GatewayServer
-          ####转发http://129.204.22.71:8888/
+          ####转发http://127.0.0.1:8888/
           uri: lb://ProduceService/
           #匹配规则
           predicates:
@@ -18,5 +18,18 @@ spring:
             - Path=/setService/**
     nacos:
       discovery:
-        server-addr: 129.204.22.71:8848
-
+        server-addr: 127.0.0.1:8848
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true

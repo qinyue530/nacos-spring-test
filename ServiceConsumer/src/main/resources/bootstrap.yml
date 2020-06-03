@@ -4,6 +4,20 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 129.204.22.71:8848
+        server-addr: 127.0.0.1:8848
       config:
-        server-addr: 129.204.22.71:8848
+        server-addr: 127.0.0.1:8848
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
