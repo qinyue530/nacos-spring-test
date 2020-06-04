@@ -10,8 +10,8 @@
         <module name="ServiceConfig" />
         <module name="ConfigService" />
         <module name="openfeign-service" />
-        <module name="ServiceSkywalking" />
         <module name="ServiceSentinel" />
+        <module name="ServiceSkywalking" />
         <module name="ServiceGateway" />
         <module name="ServiceProducer" />
       </profile>

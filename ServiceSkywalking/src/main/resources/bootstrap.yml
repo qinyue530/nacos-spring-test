@@ -7,6 +7,16 @@ spring:
         server-addr: 127.0.0.1:8848
       config:
         server-addr: 127.0.0.1:8848
+  # 设置邮箱
+  mail:
+    #设置邮箱主机
+    host: smtp.qq.com
+    # 设置用户名
+    username: xxxxx@qq.com
+    # 设置密码，该处的密码是QQ邮箱开启SMTP的授权码而非QQ密码
+    password: xxxxxx
+ #   port: 465
+    default-encoding: utf-8
 management:
   endpoint:
     metrics:
