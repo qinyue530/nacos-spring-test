@@ -19,7 +19,7 @@ public class MailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    private static final String SENDER = "xxxxxx@qq.com";
+    private static final String SENDER = "530495973@qq.com";
 
     /**
      * 发送普通邮件
