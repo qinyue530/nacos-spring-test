@@ -26,10 +26,15 @@ public class produceService {
 
     @GetMapping("/setService")
     private String setService(HttpServletRequest request) {
-        log.info("info====");
-        log.debug("debug====");
-        log.error("error====");
-        log.fatal("fatal====");
+//        log.info("info====8087");
+//        log.debug("debug====8087");
+//        log.error("error====8087");
+//        log.fatal("fatal====8087");
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         String gatewayPort = request.getHeader("serverPort");
         System.out.println("网关端口号 " + gatewayPort + "============ " + serverPort);
         return "网关端口号 " + gatewayPort + "生产者 添加服务" + serverPort;
