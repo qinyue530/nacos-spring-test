@@ -7,14 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ServiceConsumer" />
-        <module name="ServiceConfig" />
-        <module name="ConfigService" />
-        <module name="openfeign-service" />
-        <module name="ServiceSentinel" />
+        <module name="nacos-client" />
+        <module name="nacos-test" />
+        <module name="nacos-cmdb" />
         <module name="ServiceSkywalking" />
-        <module name="ServiceGateway" />
+        <module name="nacos-example" />
+        <module name="nacos-address" />
+        <module name="ServiceConsumer" />
+        <module name="nacos-core" />
+        <module name="ConfigService" />
+        <module name="ServiceConfig" />
         <module name="ServiceProducer" />
+        <module name="ServiceGateway" />
+        <module name="nacos-common" />
+        <module name="nacos-api" />
+        <module name="nacos-naming" />
+        <module name="nacos-console" />
+        <module name="openfeign-service" />
+        <module name="nacos-config" />
+        <module name="ServiceSentinel" />
+        <module name="nacos-istio" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -6,5 +6,26 @@
     <file url="file://$PROJECT_DIR$/ServiceGateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ServiceProducer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ServiceSkywalking/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/address/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/address/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/cmdb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/cmdb/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/console/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/console/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/example/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/istio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/istio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/naming/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/naming/src/main/resources" charset="UTF-8" />
   </component>
 </project>
