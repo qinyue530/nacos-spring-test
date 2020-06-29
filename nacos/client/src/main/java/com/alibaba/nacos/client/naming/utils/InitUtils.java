@@ -99,7 +99,8 @@ public class InitUtils {
                 UtilAndComs.WEB_CONTEXT = webContext.indexOf("/") > -1 ? webContext
                     : "/" + webContext;
 
-                UtilAndComs.NACOS_URL_BASE = UtilAndComs.WEB_CONTEXT + "/v1/ns";
+//              UtilAndComs.NACOS_URL_BASE = UtilAndComs.WEB_CONTEXT + "/v1/ns";
+                UtilAndComs.NACOS_URL_BASE = UtilAndComs.WEB_CONTEXT.equals("/")?"/v1/ns":UtilAndComs.WEB_CONTEXT+ "v1/ns" ;
                 UtilAndComs.NACOS_URL_INSTANCE = UtilAndComs.NACOS_URL_BASE + "/instance";
             }
         });
