@@ -234,6 +234,7 @@ public class ServerHttpAgent implements HttpAgent {
     private String getUrl(String serverAddr, String relativePath) {
         String contextPath = serverListMgr.getContentPath().startsWith("/") ?
                 serverListMgr.getContentPath() : "/" + serverListMgr.getContentPath();
+        if(contextPath.equals("/"))contextPath="";
         return serverAddr + contextPath + relativePath;
     }
 
