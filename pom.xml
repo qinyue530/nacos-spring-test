@@ -14,6 +14,7 @@
         <module>ServiceGateway</module>
         <module>ServiceConfig</module>
         <module>ServiceSkywalking</module>
+        <module>ServiceOauth</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
