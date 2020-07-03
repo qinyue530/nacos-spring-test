@@ -1,4 +1,5 @@
-
+server:
+  port: 8088
 ####服务网关名称
 spring:
   application:

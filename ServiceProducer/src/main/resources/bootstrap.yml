@@ -1,4 +1,5 @@
 server:
+  port: 8086
   tomcat:
     max-threads: 100
 spring:

@@ -1,3 +1,5 @@
+server:
+  port: 8084
 spring:
   application:
     name: ConsumeService
@@ -5,7 +7,7 @@ spring:
     nacos:
       discovery:
         server-addr: idea.nginx.nacos:81
-        ephemeral: false
+#        ephemeral: false
       config:
         server-addr: idea.nginx.nacos:81
 management:
