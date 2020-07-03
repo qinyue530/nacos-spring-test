@@ -6,11 +6,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: idea.nginx.nacos:81
+        server-addr: 127.0.0.1:8848
         service: ConfigApplication
         ephemeral: false
       config:
-        server-addr: idea.nginx.nacos:81
+        server-addr: 127.0.0.1:8848
         group: DEFAULT_GROUP
         file-extension: yaml #nacos的配置列表 dataId 必须有后缀 且与配置格式相同
   datasource:
