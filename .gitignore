@@ -1,2 +1,3 @@
 *.class
 ServiceGateway/target/
+*/target/
