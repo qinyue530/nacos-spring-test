@@ -19,7 +19,7 @@ spring:
             - Path=/getName/**
     nacos:
       discovery:
-        server-addr: idea.nginx.nacos:81
+        server-addr: 127.0.0.1:8848
 management:
   endpoint:
     metrics:
