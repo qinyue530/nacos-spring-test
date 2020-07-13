@@ -5,18 +5,18 @@ spring:
   application:
     name: GatewayServer
   cloud:
-    gateway:
-      ###路由策略
-      enabled: true
-      routes:
-        ###根据我们的服务名称查找地址实现调用
-        - id: GatewayServer
-          ####转发http://127.0.0.1:8888/
-          uri: lb://ConfigApplication/
-          #匹配规则
-          predicates:
-            - Path=/**
-            - Path=/getName/**
+#    gateway:
+#      ###路由策略
+#      enabled: true
+#      routes:
+#        ###根据我们的服务名称查找地址实现调用
+#        - id: ConfigService
+#          ####转发http://127.0.0.1:8888/
+#          uri: lb://ConfigService/
+#          #匹配规则
+#          predicates:
+#            - Path=/**
+#            - Path=/getName/**
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
