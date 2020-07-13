@@ -38,7 +38,7 @@ public class ConfigController implements ApplicationContextAware {
 //        System.out.println(naming.toString());
         List<Instance> instance =naming.getAllInstances("ConfigService");
         for(Instance i : instance){
-            System.out.println(i.getInstanceId()+" "+i.getServiceName()+" "+i.getIp()+":"+i.getPort()+"实例元数据"+i.getMetadata());
+            System.out.println(i.getServiceName()+" "+i.getIp()+":"+i.getPort()+"实例元数据"+i.getMetadata());
             System.out.println(i.getMetadata().get("test")+"=============");
         }
 
