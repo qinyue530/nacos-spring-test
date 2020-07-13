@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8073
 spring:
   application:
     name: test  #Date Id
@@ -7,8 +7,12 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        service: ConfigApplication
-        ephemeral: false
+        service: ConfigService
+#        ephemeral: falset
+        metadata:
+          test: aaaaa
+          fdfmalkfs: fdsfdbkkmxc
+          qinyue: qinyue
       config:
         server-addr: 127.0.0.1:8848
         group: DEFAULT_GROUP
