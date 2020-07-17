@@ -7,15 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xxl-job-executor-sample-jfinal" />
-        <module name="nacos-client" />
+        <module name="xxl-job-executor-sample-springboot" />
+        <module name="xxl-job-executor-sample-spring" />
         <module name="nacos-test" />
         <module name="nacos-cmdb" />
-        <module name="ServiceSkywalking" />
         <module name="nacos-example" />
         <module name="nacos-address" />
-        <module name="xxl-job-executor-sample-nutz" />
+        <module name="xxl-job-executor-sample-jfinal" />
         <module name="openfeign-service" />
+        <module name="ServiceOauth" />
+        <module name="ServiceSentinel" />
         <module name="ServiceConsumer" />
         <module name="nacos-core" />
         <module name="ConfigService" />
@@ -26,15 +27,14 @@
         <module name="nacos-common" />
         <module name="xxl-job-core" />
         <module name="nacos-api" />
-        <module name="nacos-naming" />
+        <module name="xxl-job-executor-sample-nutz" />
         <module name="xxl-job-admin" />
         <module name="nacos-console" />
-        <module name="ServiceOauth" />
-        <module name="xxl-job-executor-sample-spring" />
-        <module name="xxl-job-executor-sample-springboot" />
+        <module name="nacos-client" />
+        <module name="nacos-naming" />
         <module name="nacos-config" />
         <module name="xxl-job-executor-sample-jboot" />
-        <module name="ServiceSentinel" />
+        <module name="ServiceSkywalking" />
         <module name="nacos-istio" />
       </profile>
     </annotationProcessing>
@@ -44,6 +44,7 @@
       <module name="nacos-spring-test" target="1.8" />
       <module name="openfeign-parent" target="1.8" />
       <module name="openfeign-service" target="1.8" />
+      <module name="seata-parent" target="1.8" />
       <module name="ServiceSentinel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
