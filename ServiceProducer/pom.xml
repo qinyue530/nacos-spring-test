@@ -11,10 +11,17 @@
 
     <artifactId>ServiceProducer</artifactId>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-parameter-flow-control -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-parameter-flow-control</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-sentinel -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <version>0.2.0.RELEASE</version>
+            <version>2.2.1.RELEASE</version>
         </dependency>
     </dependencies>
 
