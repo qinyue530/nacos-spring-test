@@ -13,6 +13,7 @@ spring:
           test: aaaaa
           fdfmalkfs: fdsfdbkkmxc
           qinyue: qinyue
+        ephemeral: false
       config:
         server-addr: 127.0.0.1:8848
         group: DEFAULT_GROUP
