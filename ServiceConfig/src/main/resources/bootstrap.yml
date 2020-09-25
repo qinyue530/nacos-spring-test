@@ -8,16 +8,16 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         service: ConfigService
-#        ephemeral: falset
+        ephemeral: false
         metadata:
           test: aaaaa
           fdfmalkfs: fdsfdbkkmxc
           qinyue: qinyue
-        ephemeral: false
       config:
         server-addr: 127.0.0.1:8848
         group: DEFAULT_GROUP
         file-extension: yaml #nacos的配置列表 dataId 必须有后缀 且与配置格式相同
+        prefix: test
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/swtest
     username: root
