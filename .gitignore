@@ -4,6 +4,4 @@
 logs
 *.iml
 *.log
-nacos-tar-gz/*/data/*
-nacos-tar-gz/*/status/*
-nacos-tar-gz/*/logs/*
+nacos-tar-gz/*/data/derby-data/seg0/
