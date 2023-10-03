@@ -3,3 +3,7 @@
 .idea/
 logs
 *.iml
+*.log
+nacos-tar-gz/*/data/*
+nacos-tar-gz/*/status/*
+nacos-tar-gz/*/logs/*
